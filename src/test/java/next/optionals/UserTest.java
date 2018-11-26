@@ -1,9 +1,11 @@
-package next.exception;
+package next.optionals;
 
+import static next.optionals.User.*;
 import static org.junit.Assert.*;
-import static next.exception.User.*;
 
 import org.junit.Test;
+
+import next.optionals.User;
 
 public class UserTest {
     @Test

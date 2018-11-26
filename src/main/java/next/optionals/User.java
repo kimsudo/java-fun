@@ -1,4 +1,4 @@
-package next.exception;
+package next.optionals;
 
 public class User {
     private String name;

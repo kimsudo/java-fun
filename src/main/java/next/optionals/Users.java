@@ -1,4 +1,4 @@
-package next.exception;
+package next.optionals;
 
 import java.util.Arrays;
 import java.util.List;
