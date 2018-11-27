@@ -6,7 +6,7 @@ import next.optional.Computer.USB;
 public class ComputerStore {
 	public static final String UNKNOWN_VERSION = "UNKNOWN";
 	
-	public static String getVersion1(Computer computer) {
+	public static String getVersion(Computer computer) {
 		String version = UNKNOWN_VERSION;
 		if(computer != null){
 		  Soundcard soundcard = computer.getSoundcard();

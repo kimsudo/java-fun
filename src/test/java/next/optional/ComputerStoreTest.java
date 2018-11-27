@@ -16,23 +16,23 @@ public class ComputerStoreTest {
 		String version = "pobi's usb";
 		Soundcard soundcard = new Soundcard(new USB(version));
 		Computer computer = new Computer(soundcard);
-		assertEquals(version, ComputerStore.getVersion1(computer));
+		assertEquals(version, ComputerStore.getVersion(computer));
 	}
 	
 	@Test
 	public void getVersionWhenComputerIsNull() throws Exception {
-		assertEquals(ComputerStore.UNKNOWN_VERSION, ComputerStore.getVersion1(null));
+		assertEquals(ComputerStore.UNKNOWN_VERSION, ComputerStore.getVersion(null));
 	}
 
 	@Test
 	public void getVersionWhenSoundcardIsNull() throws Exception {
 		Computer computer = new Computer(null);
-		assertEquals(ComputerStore.UNKNOWN_VERSION, ComputerStore.getVersion1(computer));
+		assertEquals(ComputerStore.UNKNOWN_VERSION, ComputerStore.getVersion(computer));
 	}
 	
 	@Test
 	public void getVersionWhenUSBIsNull() throws Exception {
 		Computer computer = new Computer(new Soundcard(null));
-		assertEquals(ComputerStore.UNKNOWN_VERSION, ComputerStore.getVersion1(computer));
+		assertEquals(ComputerStore.UNKNOWN_VERSION, ComputerStore.getVersion(computer));
 	}
 }
