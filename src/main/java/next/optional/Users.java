@@ -1,4 +1,4 @@
-package next.optionals;
+package next.optional;
 
 import java.util.Arrays;
 import java.util.List;

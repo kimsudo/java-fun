@@ -1,4 +1,4 @@
-package next.optionals;
+package next.optional;
 
 public class Computer {
 	private Soundcard soundcard;

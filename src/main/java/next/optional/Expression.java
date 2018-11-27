@@ -1,4 +1,4 @@
-package next.optionals;
+package next.optional;
 
 enum Expression {
     PLUS("+"), MINUS("-"), TIMES("*"), DIVIDE("/");

@@ -1,10 +1,10 @@
-package next.optionals;
+package next.optional;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import next.optionals.Expression;
+import next.optional.Expression;
 
 public class ExpressionTest {
     @Test

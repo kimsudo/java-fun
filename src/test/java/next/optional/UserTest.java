@@ -1,11 +1,11 @@
-package next.optionals;
+package next.optional;
 
-import static next.optionals.User.*;
+import static next.optional.User.*;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import next.optionals.User;
+import next.optional.User;
 
 public class UserTest {
     @Test

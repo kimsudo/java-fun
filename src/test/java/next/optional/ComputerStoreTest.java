@@ -1,11 +1,13 @@
-package next.optionals;
+package next.optional;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import next.optionals.Computer.Soundcard;
-import next.optionals.Computer.USB;
+import next.optional.Computer;
+import next.optional.ComputerStore;
+import next.optional.Computer.Soundcard;
+import next.optional.Computer.USB;
 
 public class ComputerStoreTest {
 
