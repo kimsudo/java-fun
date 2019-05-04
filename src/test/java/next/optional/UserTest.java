@@ -1,28 +1,26 @@
 package next.optional;
 
 import static next.optional.User.*;
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
-
-import next.optional.User;
 
 public class UserTest {
     @Test
     public void whenFiltersWithoutOptional_thenCorrect() {
-        assertTrue(ageIsInRange1(new User("crong", 35)));
-        assertFalse(ageIsInRange1(new User("crong", 48)));
-        assertFalse(ageIsInRange1(new User("crong", null)));
-        assertFalse(ageIsInRange1(new User("crong", 29)));
-        assertFalse(ageIsInRange1(null));
+        assertThat(ageIsInRange1(new User("crong", 35))).isTrue();
+        assertThat(ageIsInRange1(new User("crong", 48))).isFalse();
+        assertThat(ageIsInRange1(new User("crong", null))).isFalse();
+        assertThat(ageIsInRange1(new User("crong", 29))).isFalse();
+        assertThat(ageIsInRange1(null)).isFalse();
     }
     
     @Test
     public void whenFiltersWithOptional_thenCorrect() {
-        assertTrue(ageIsInRange2(new User("crong", 35)));
-        assertFalse(ageIsInRange2(new User("crong", 48)));
-        assertFalse(ageIsInRange2(new User("crong", null)));
-        assertFalse(ageIsInRange2(new User("crong", 29)));
-        assertFalse(ageIsInRange2(null));
+        assertThat(ageIsInRange2(new User("crong", 35))).isTrue();
+        assertThat(ageIsInRange2(new User("crong", 48))).isFalse();
+        assertThat(ageIsInRange2(new User("crong", null))).isFalse();
+        assertThat(ageIsInRange2(new User("crong", 29))).isFalse();
+        assertThat(ageIsInRange2(null)).isFalse();
     }
 }

@@ -1,8 +1,8 @@
 package next.fp;
 
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 public class CarTest {
     @Test
@@ -14,7 +14,7 @@ public class CarTest {
                 return true;
             }
         });
-        assertEquals(new Car("pobi", 1), actual);
+        assertThat(actual).isEqualTo(new Car("pobi", 1));
     }
 
     @Test
@@ -26,6 +26,6 @@ public class CarTest {
                 return false;
             }
         });
-        assertEquals(new Car("pobi", 0), actual);
+        assertThat(actual).isEqualTo(new Car("pobi", 0));
     }
 }

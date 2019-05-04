@@ -1,11 +1,9 @@
 package next.optional;
 
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
-import next.optional.Computer;
-import next.optional.ComputerStore;
 import next.optional.Computer.Soundcard;
 import next.optional.Computer.USB;
 
@@ -16,23 +14,23 @@ public class ComputerStoreTest {
 		String version = "pobi's usb";
 		Soundcard soundcard = new Soundcard(new USB(version));
 		Computer computer = new Computer(soundcard);
-		assertEquals(version, ComputerStore.getVersion(computer));
+		assertThat(ComputerStore.getVersion(computer)).isEqualTo(version);
 	}
 	
 	@Test
 	public void getVersionWhenComputerIsNull() throws Exception {
-		assertEquals(ComputerStore.UNKNOWN_VERSION, ComputerStore.getVersion(null));
+		assertThat(ComputerStore.getVersion(null)).isEqualTo(ComputerStore.UNKNOWN_VERSION);
 	}
 
 	@Test
 	public void getVersionWhenSoundcardIsNull() throws Exception {
 		Computer computer = new Computer(null);
-		assertEquals(ComputerStore.UNKNOWN_VERSION, ComputerStore.getVersion(computer));
+		assertThat(ComputerStore.getVersion(computer)).isEqualTo(ComputerStore.UNKNOWN_VERSION);
 	}
 	
 	@Test
 	public void getVersionWhenUSBIsNull() throws Exception {
 		Computer computer = new Computer(new Soundcard(null));
-		assertEquals(ComputerStore.UNKNOWN_VERSION, ComputerStore.getVersion(computer));
+		assertThat(ComputerStore.getVersion(computer)).isEqualTo(ComputerStore.UNKNOWN_VERSION);
 	}
 }

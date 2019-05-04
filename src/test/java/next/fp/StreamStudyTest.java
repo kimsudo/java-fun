@@ -1,14 +1,12 @@
 package next.fp;
 
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import next.fp.StreamStudy;
 
 public class StreamStudyTest {
 	private List<Integer> numbers;
@@ -38,13 +36,13 @@ public class StreamStudyTest {
 	@Test
 	public void sumAll() throws Exception {
 		long sum = StreamStudy.sumAll(numbers);
-		assertEquals(21, sum);
+		assertThat(sum).isEqualTo(21);
 	}
 	
 	@Test
 	public void sumOverThreeAndDouble() throws Exception {
 		numbers = Arrays.asList(3, 1, 6, 2, 4, 8);
 		long sum = StreamStudy.sumOverThreeAndDouble(numbers);
-		assertEquals(36, sum);
+		assertThat(sum).isEqualTo(36);
 	}
 }

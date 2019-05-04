@@ -1,6 +1,6 @@
 package next.exception;
 
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
@@ -8,15 +8,15 @@ public class PositionTest {
     @Test
     public void create_00() {
         Position p = new Position("a1");
-        assertEquals(0, p.getX());
-        assertEquals(0, p.getY());
+        assertThat(p.getX()).isEqualTo(0);
+        assertThat(p.getY()).isEqualTo(0);
     }
     
     @Test
     public void create_77() {
         Position p = new Position("h8");
-        assertEquals(7, p.getX());
-        assertEquals(7, p.getY());
+        assertThat(p.getX()).isEqualTo(7);
+        assertThat(p.getY()).isEqualTo(7);
     }
 
     @Test (expected = InValidPositionException.class)

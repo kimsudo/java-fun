@@ -1,24 +1,21 @@
 package next.optional;
 
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
-
-import next.optional.User;
-import next.optional.Users;
 
 public class UsersTest {
 
     @Test
     public void getUser() {
         Users users = new Users();
-        assertEquals(new User("crong", 35), users.getUser("crong"));
+        assertThat(users.getUser("crong")).isEqualTo(new User("crong", 35));
     }
 
     
     @Test
     public void getDefaultUser() {
         Users users = new Users();
-        assertEquals(Users.DEFAULT_USER, users.getUser("codesquard"));
+        assertThat(users.getUser("codesquard")).isEqualTo(Users.DEFAULT_USER);
     }
 }

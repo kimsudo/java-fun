@@ -1,15 +1,14 @@
 package next.optional;
 
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
-import next.optional.Expression;
 
 public class ExpressionTest {
     @Test
     public void of() {
-        assertTrue(Expression.PLUS == Expression.of("+"));
+        assertThat(Expression.PLUS == Expression.of("+")).isTrue();
     }
     
     @Test (expected = IllegalArgumentException.class)

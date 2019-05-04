@@ -1,14 +1,12 @@
 package next.fp;
 
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import next.fp.Lambda;
 
 public class LambdaTest {
 	private List<Integer> numbers;
@@ -36,18 +34,18 @@ public class LambdaTest {
 	@Test
 	public void sumAll() throws Exception {
 		int sum = Lambda.sumAll(numbers);
-		assertEquals(21, sum);
+		assertThat(sum).isEqualTo(21);
 	}
 	
 	@Test
 	public void sumAllEven() throws Exception {
 		int sum = Lambda.sumAllEven(numbers);
-		assertEquals(12, sum);
+		assertThat(sum).isEqualTo(12);
 	}
 	
 	@Test
 	public void sumAllOverThree() throws Exception {
 		int sum = Lambda.sumAllOverThree(numbers);
-		assertEquals(15, sum);
+		assertThat(sum).isEqualTo(15);
 	}
 }
