@@ -1,10 +1,11 @@
 package next.optional;
 
+import java.util.Optional;
+
 public class Computer {
 	private Soundcard soundcard;
 
 	public Computer(Soundcard soundcard) {
-		super();
 		this.soundcard = soundcard;
 	}
 	
